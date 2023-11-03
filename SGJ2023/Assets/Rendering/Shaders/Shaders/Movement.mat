@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Movement-Vertical
+  m_Name: Movement
   m_Shader: {fileID: -6465566751694194690, guid: f5dea40c07fb7474280d79e236360362, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -42,7 +42,7 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _Speed: {r: 0, g: 0.1, b: 0, a: 0}
+    - _Speed: {r: 0.15, g: 0.15, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &5142463466046874265
 MonoBehaviour:
