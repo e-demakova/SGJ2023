@@ -64,6 +64,24 @@ namespace Input
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Top"",
+                    ""type"": ""Button"",
+                    ""id"": ""9fb1ffd7-de9c-4765-a57e-9557c0597314"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Down"",
+                    ""type"": ""Button"",
+                    ""id"": ""4bbefa5d-ff63-4e79-8347-f00ee3da063b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -220,6 +238,50 @@ namespace Input
                     ""action"": ""Right"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fa255d22-3c05-44f0-9884-7827184a4aeb"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Top"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f4eb25ae-d1a3-4635-a961-6f19d91e5195"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Top"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""895b90b6-1d3f-4002-8113-26c309e6e5ff"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Down"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4ad4ee62-fdc4-42a1-9fdf-6216f9509c84"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Down"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -293,6 +355,8 @@ namespace Input
             m_Main_Act = m_Main.FindAction("Act", throwIfNotFound: true);
             m_Main_Left = m_Main.FindAction("Left", throwIfNotFound: true);
             m_Main_Right = m_Main.FindAction("Right", throwIfNotFound: true);
+            m_Main_Top = m_Main.FindAction("Top", throwIfNotFound: true);
+            m_Main_Down = m_Main.FindAction("Down", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -358,6 +422,8 @@ namespace Input
         private readonly InputAction m_Main_Act;
         private readonly InputAction m_Main_Left;
         private readonly InputAction m_Main_Right;
+        private readonly InputAction m_Main_Top;
+        private readonly InputAction m_Main_Down;
         public struct MainActions
         {
             private @InputActions m_Wrapper;
@@ -366,6 +432,8 @@ namespace Input
             public InputAction @Act => m_Wrapper.m_Main_Act;
             public InputAction @Left => m_Wrapper.m_Main_Left;
             public InputAction @Right => m_Wrapper.m_Main_Right;
+            public InputAction @Top => m_Wrapper.m_Main_Top;
+            public InputAction @Down => m_Wrapper.m_Main_Down;
             public InputActionMap Get() { return m_Wrapper.m_Main; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -387,6 +455,12 @@ namespace Input
                 @Right.started += instance.OnRight;
                 @Right.performed += instance.OnRight;
                 @Right.canceled += instance.OnRight;
+                @Top.started += instance.OnTop;
+                @Top.performed += instance.OnTop;
+                @Top.canceled += instance.OnTop;
+                @Down.started += instance.OnDown;
+                @Down.performed += instance.OnDown;
+                @Down.canceled += instance.OnDown;
             }
 
             private void UnregisterCallbacks(IMainActions instance)
@@ -403,6 +477,12 @@ namespace Input
                 @Right.started -= instance.OnRight;
                 @Right.performed -= instance.OnRight;
                 @Right.canceled -= instance.OnRight;
+                @Top.started -= instance.OnTop;
+                @Top.performed -= instance.OnTop;
+                @Top.canceled -= instance.OnTop;
+                @Down.started -= instance.OnDown;
+                @Down.performed -= instance.OnDown;
+                @Down.canceled -= instance.OnDown;
             }
 
             public void RemoveCallbacks(IMainActions instance)
@@ -471,6 +551,8 @@ namespace Input
             void OnAct(InputAction.CallbackContext context);
             void OnLeft(InputAction.CallbackContext context);
             void OnRight(InputAction.CallbackContext context);
+            void OnTop(InputAction.CallbackContext context);
+            void OnDown(InputAction.CallbackContext context);
         }
     }
 }

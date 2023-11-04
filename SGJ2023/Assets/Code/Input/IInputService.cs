@@ -13,6 +13,8 @@ namespace Input
     InputAction Act { get; }
     InputAction Left { get; }
     InputAction Right { get; }
+    InputAction Up { get; }
+    InputAction Down { get; }
     EventSystem EventSystem { get; }
     bool Enabled { get; set; }
 
