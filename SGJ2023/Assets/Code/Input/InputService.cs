@@ -39,6 +39,8 @@ namespace Input
 
     public InputAction Move => _actions.Main.Move;
     public InputAction Act => _actions.Main.Act;
+    public InputAction Left => _actions.Main.Left;
+    public InputAction Right => _actions.Main.Right;
 
     public EventSystem EventSystem => _eventSystem;
 

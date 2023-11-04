@@ -10,7 +10,7 @@ namespace Map
   public class InteractiveObject : MonoBehaviour
   {
     private readonly List<IDisposable> _subscribers = new();
-    
+
     [SerializeField]
     private Collider2D _collider;
 
@@ -22,7 +22,7 @@ namespace Map
     {
       _mapInteraction = mapInteraction;
     }
-    
+
     private void Awake()
     {
       _collider.TriggerEnter2D().Subscribe(EnableInteraction).AddTo(_subscribers);
@@ -31,8 +31,11 @@ namespace Map
       _action = GetComponent<IAction>();
     }
 
-    private void OnDestroy() =>
+    private void OnDestroy()
+    {
       _subscribers.DisposeAll();
+      _mapInteraction.DisableInteraction(_action);
+    }
 
     private void EnableInteraction() =>
       _mapInteraction.EnableInteraction(_action);
