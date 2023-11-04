@@ -9,13 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c775c9908d224ae6a53e3381cb1bcf72, type: 3}
-  m_Name: DadDead
+  m_Script: {fileID: 11500000, guid: f18cb1ff4f154c579cfa56470d42c88d, type: 3}
+  m_Name: Scenes
   m_EditorClassIdentifier: 
-  Scene:
-    m_AssetGUID: 1df5795a40364804f8d71af8b30f978b
+  InitialScene:
+    m_AssetGUID: 6ac551aa63886d74fb6ebb9e8e68a44e
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  TimeText: 14:00
-  BottleStatus: {fileID: 21300000, guid: c14ebebdb6e70b545af7fd2b5d9575e3, type: 3}
+  DayTimeInfoScene:
+    m_AssetGUID: c6aa516111a8ffd408c30c4c26e827df
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0

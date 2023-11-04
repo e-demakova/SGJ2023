@@ -67,6 +67,46 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d4034c0d59ace574a9281c92c17e3a6a
+    m_Address: Assets/Scenes/Map/Office-passed.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e091c1c595d91bc4bb66c21b2ee312db
+    m_Address: Assets/Scenes/Map/Disco-passed.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4309a18dbc77e9549b0f793f9d593d2e
+    m_Address: Assets/Scenes/MiniGames/PaperHardWork.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1401781a50f60c6419081811e758b86b
+    m_Address: Assets/Scenes/Map/OfficeHard.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c197b06ea90e6e848ad0a60b10c42d30
+    m_Address: Assets/Scenes/Map/OfficeHard-passed.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: db752f591278db040a853c56c23be00e
+    m_Address: Assets/Scenes/Map/Toilet.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b181076984aed0946a9d13ae6158a1ee
+    m_Address: Assets/Scenes/Map/Toilet-passed.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d44600946aa130f4791f66e9db99677e
+    m_Address: Assets/Scenes/07-DadDead/DadDead.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 20e80ff5af28e34439b7c625987c3f42, type: 2}
   m_SchemaSet:

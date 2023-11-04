@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CopeEscape
   m_EditorClassIdentifier: 
   Scene:
-    m_AssetGUID: b56b0f46b39af8f4faed2393b1e82f11
+    m_AssetGUID: db752f591278db040a853c56c23be00e
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
