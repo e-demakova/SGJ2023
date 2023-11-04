@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Infrastructure.GameCore;
 using Infrastructure.GameCore.States;
@@ -34,6 +35,9 @@ namespace GameplayLogic.MiniGames.PaperWork
     [SerializeField]
     private AssetReference _scene;
 
+    [SerializeField, Min(0)]
+    private float _miniGameEndingDuration = 0.2f;
+    
     private IGameObjectBuilderFactory _factory;
     private IInputService _input;
     private IGameStateMachine _gameStateMachine;
@@ -94,6 +98,12 @@ namespace GameplayLogic.MiniGames.PaperWork
     private void EndMiniGame()
     {
       _subscribers.DisposeAll();
+      StartCoroutine(Ending());
+    }
+
+    private IEnumerator Ending()
+    {
+      yield return new WaitForSeconds(_miniGameEndingDuration);
       _gameStateMachine.Enter<LoadSceneState, AssetReference>(_scene);
     }
 

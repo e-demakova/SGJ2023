@@ -26,6 +26,7 @@ namespace GameplayLogic.MiniGames.DressUp
     private IInputService _input;
     private IGameStateMachine _gameStateMachine;
 
+    [SerializeField]
     private int _hairIndex = -1;
     private bool _canApply;
 

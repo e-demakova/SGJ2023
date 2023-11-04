@@ -1,4 +1,5 @@
 ﻿using System;
+using DG.Tweening;
 using UnityEngine;
 
 namespace GameplayLogic.MiniGames.PaperWork
@@ -22,6 +23,9 @@ namespace GameplayLogic.MiniGames.PaperWork
     [SerializeField]
     private Sprite _right;
 
+    [SerializeField]
+    private float _moveDuration = 0.1f;
+
     public Blank Init(BlankType type, int sortingOrder)
     {
       Type = type;
@@ -39,7 +43,7 @@ namespace GameplayLogic.MiniGames.PaperWork
 
     public void MoveTo(Vector3 position)
     {
-      transform.position = position;
+      transform.DOMove(position, _moveDuration);
       _renderer.sortingOrder *= -1;
     }
   }
