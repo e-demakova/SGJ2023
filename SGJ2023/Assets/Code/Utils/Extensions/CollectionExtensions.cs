@@ -12,6 +12,12 @@ namespace Utils.Extensions
     public static T Random<T>(this T[] array) =>
       array[UnityEngine.Random.Range(0, array.Length)];
     
+    public static T AddTo<T>(this T element, List<T> list)
+    {
+      list.Add(element);
+      return element;
+    }
+
     public static void DisposeAll(this ICollection<IDisposable> list)
     {
       foreach (IDisposable disposable in list)

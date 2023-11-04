@@ -37,6 +37,15 @@ namespace Input
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Act"",
+                    ""type"": ""Button"",
+                    ""id"": ""efc078ce-2d81-4ae4-a782-c7cc4d968267"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -138,6 +147,17 @@ namespace Input
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""581415ce-b677-4c52-8961-522b1dbd4d49"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Act"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -208,6 +228,7 @@ namespace Input
             // Main
             m_Main = asset.FindActionMap("Main", throwIfNotFound: true);
             m_Main_Move = m_Main.FindAction("Move", throwIfNotFound: true);
+            m_Main_Act = m_Main.FindAction("Act", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -270,11 +291,13 @@ namespace Input
         private readonly InputActionMap m_Main;
         private List<IMainActions> m_MainActionsCallbackInterfaces = new List<IMainActions>();
         private readonly InputAction m_Main_Move;
+        private readonly InputAction m_Main_Act;
         public struct MainActions
         {
             private @InputActions m_Wrapper;
             public MainActions(@InputActions wrapper) { m_Wrapper = wrapper; }
             public InputAction @Move => m_Wrapper.m_Main_Move;
+            public InputAction @Act => m_Wrapper.m_Main_Act;
             public InputActionMap Get() { return m_Wrapper.m_Main; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -287,6 +310,9 @@ namespace Input
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
+                @Act.started += instance.OnAct;
+                @Act.performed += instance.OnAct;
+                @Act.canceled += instance.OnAct;
             }
 
             private void UnregisterCallbacks(IMainActions instance)
@@ -294,6 +320,9 @@ namespace Input
                 @Move.started -= instance.OnMove;
                 @Move.performed -= instance.OnMove;
                 @Move.canceled -= instance.OnMove;
+                @Act.started -= instance.OnAct;
+                @Act.performed -= instance.OnAct;
+                @Act.canceled -= instance.OnAct;
             }
 
             public void RemoveCallbacks(IMainActions instance)
@@ -359,6 +388,7 @@ namespace Input
         public interface IMainActions
         {
             void OnMove(InputAction.CallbackContext context);
+            void OnAct(InputAction.CallbackContext context);
         }
     }
 }

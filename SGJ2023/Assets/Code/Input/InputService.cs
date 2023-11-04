@@ -38,6 +38,7 @@ namespace Input
     public Vector2Int InputDirection { get; private set; }
 
     public InputAction Move => _actions.Main.Move;
+    public InputAction Act => _actions.Main.Act;
 
     public EventSystem EventSystem => _eventSystem;
 

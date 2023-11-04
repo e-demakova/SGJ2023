@@ -3,6 +3,7 @@ using Infrastructure.GameCore;
 using Infrastructure.GameCore.States;
 using Infrastructure.GameObjectsManagement;
 using Input;
+using Map;
 using SceneLoading;
 using Utils.Coroutines;
 using Utils.Extensions;
@@ -28,6 +29,7 @@ namespace Infrastructure.Installers
       Container.BindService<SceneLoader>();
       Container.BindService<InputService>();
       Container.BindService<GameObjectBuilderFactory>();
+      Container.BindService<MapInteractionService>();
     }
 
     private void BindStateMachine()

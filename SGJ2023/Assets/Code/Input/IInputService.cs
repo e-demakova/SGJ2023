@@ -10,6 +10,7 @@ namespace Input
     Vector2Int InputDirection { get; }
     
     InputAction Move { get; }
+    InputAction Act { get; }
     EventSystem EventSystem { get; }
     bool Enabled { get; set; }
 
