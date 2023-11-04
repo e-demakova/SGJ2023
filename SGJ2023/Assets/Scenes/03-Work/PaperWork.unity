@@ -573,6 +573,7 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
+  _miniGameEndingDuration: 0.2
 --- !u!1 &1417929111
 GameObject:
   m_ObjectHideFlags: 0

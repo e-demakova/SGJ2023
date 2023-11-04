@@ -10,5 +10,6 @@ namespace GameplayLogic.Map
     public AssetReference Scene;
     public string TimeText;
     public Sprite BottleStatus;
+    public AudioClip Music;
   }
 }

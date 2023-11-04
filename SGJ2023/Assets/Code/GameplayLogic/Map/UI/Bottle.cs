@@ -8,7 +8,7 @@ namespace GameplayLogic.Map.UI
   {
     [SerializeField]
     private Image _image;
-    
+
     private IDayTimeService _dayTimeService;
 
     [Inject]
@@ -19,7 +19,8 @@ namespace GameplayLogic.Map.UI
 
     private void Start()
     {
-      _image.sprite = _dayTimeService.Config.BottleStatus;
+      if (_dayTimeService.Config)
+        _image.sprite = _dayTimeService.Config.BottleStatus;
     }
   }
 }

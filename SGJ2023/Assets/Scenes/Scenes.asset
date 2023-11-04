@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Scenes
   m_EditorClassIdentifier: 
   InitialScene:
-    m_AssetGUID: 1df5795a40364804f8d71af8b30f978b
+    m_AssetGUID: 6ac551aa63886d74fb6ebb9e8e68a44e
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0

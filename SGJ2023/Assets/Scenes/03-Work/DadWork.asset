@@ -19,3 +19,4 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   TimeText: 14:00
   BottleStatus: {fileID: 21300000, guid: c14ebebdb6e70b545af7fd2b5d9575e3, type: 3}
+  Music: {fileID: 8300000, guid: 2ad6896cf3693ae4b8d9cf36fec5a6a5, type: 3}

@@ -1,4 +1,5 @@
-﻿using GameplayLogic.Map;
+﻿using GameplayLogic.Audio;
+using GameplayLogic.Map;
 using Infrastructure.Assets;
 using Infrastructure.GameCore;
 using Infrastructure.GameCore.States;
@@ -31,6 +32,7 @@ namespace Infrastructure.Installers
       Container.BindService<GameObjectBuilderFactory>();
       Container.BindService<MapInteractionService>();
       Container.BindService<DayTimeService>();
+      Container.BindService<MusicService>();
     }
 
     private void BindStateMachine()
