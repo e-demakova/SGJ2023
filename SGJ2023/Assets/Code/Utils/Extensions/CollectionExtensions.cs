@@ -18,6 +18,12 @@ namespace Utils.Extensions
       return element;
     }
 
+    public static T EnqueueTo<T>(this T element, Queue<T> list)
+    {
+      list.Enqueue(element);
+      return element;
+    }
+
     public static void DisposeAll(this ICollection<IDisposable> list)
     {
       foreach (IDisposable disposable in list)

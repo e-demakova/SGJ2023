@@ -43,15 +43,18 @@ namespace MiniGames.DressUp
 
       _input.On(_input.Act).Down()
             .When(_ => _canApply)
-            .Subscribe(LoadScene)
+            .Subscribe(EndMiniGame)
             .AddTo(_subscribers);
     }
 
     private void OnDestroy() =>
       _subscribers.DisposeAll();
 
-    private void LoadScene() =>
+    private void EndMiniGame()
+    {
+      _subscribers.DisposeAll();
       _gameStateMachine.Enter<LoadSceneState, AssetReference>(_scene);
+    }
 
     private void LeftHairVariant()
     {
