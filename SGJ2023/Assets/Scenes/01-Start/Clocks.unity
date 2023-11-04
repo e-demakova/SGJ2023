@@ -178,7 +178,7 @@ PrefabInstance:
     - target: {fileID: 4843679879659668951, guid: a34270a34077bc24a9feea1395c20f22, type: 3}
       propertyPath: _dayTime
       value: 
-      objectReference: {fileID: 11400000, guid: 19ae72a6cc777e74ebe211c0e2610b04, type: 2}
+      objectReference: {fileID: 11400000, guid: 55f788539d80fd14aaa7ae1bd365b180, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
