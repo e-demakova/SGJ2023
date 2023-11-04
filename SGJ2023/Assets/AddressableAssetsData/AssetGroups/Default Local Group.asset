@@ -33,22 +33,27 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 362526c63a6d18740a917c41ca707d5c
-    m_Address: Assets/Scenes/DressUp.unity
+    m_Address: DressUp
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 51bb579d39025fa40a05d49e6184fd2d
-    m_Address: Assets/Scenes/PaperWork.unity
+    m_Address: PaperWork
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d7e096e1e5519514987ba1a2a86b8177
-    m_Address: Assets/Scenes/Dance.unity
+    m_Address: Dance
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c6aa516111a8ffd408c30c4c26e827df
-    m_Address: Assets/Scenes/DayTime.unity
+    m_Address: DayTime
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 52020f1034cbca84baac701eb04e67c6
+    m_Address: StartDayTime
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

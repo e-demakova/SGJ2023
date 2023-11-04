@@ -1,5 +1,4 @@
-﻿using System;
-using GameplayLogic.Map;
+﻿using GameplayLogic.Map;
 using TMPro;
 using UnityEngine;
 using Zenject;
