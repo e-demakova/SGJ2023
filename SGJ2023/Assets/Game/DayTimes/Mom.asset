@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c775c9908d224ae6a53e3381cb1bcf72, type: 3}
-  m_Name: StartDayTime
+  m_Name: Mom
   m_EditorClassIdentifier: 
   Scene:
     m_AssetGUID: 6ac551aa63886d74fb6ebb9e8e68a44e
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  TimeText: 9:00
-  BottleStatus: {fileID: 21300000, guid: c14ebebdb6e70b545af7fd2b5d9575e3, type: 3}
+  TimeText: 00:30
+  BottleStatus: {fileID: 21300000, guid: d176b5238232ea241a329e4998a317d1, type: 3}

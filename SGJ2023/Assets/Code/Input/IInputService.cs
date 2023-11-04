@@ -21,5 +21,6 @@ namespace Input
     ISubscriber<InputContext> On(InputAction action);
     ISubscriber<Vector2> OnVector();
     InputActionPhase GetPhase(InputAction reference);
+    ISubscriber<InputContext> On();
   }
 }

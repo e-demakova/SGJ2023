@@ -91,6 +91,9 @@ namespace Input
     public ISubscriber<InputContext> On(InputAction action) =>
       new Subscriber<InputContext>(_actionsHandler).When(x => x.Action == action);
 
+    public ISubscriber<InputContext> On() =>
+      new Subscriber<InputContext>(_actionsHandler);
+
     public ISubscriber<Vector2> OnVector() =>
       new Subscriber<Vector2>(_vectorHandler);
 

@@ -36,14 +36,11 @@ namespace GameplayLogic.MiniGames.Dance
 
     private void Start()
     {
-      SubscribeOn(_input.Left);
-      SubscribeOn(_input.Right);
-      SubscribeOn(_input.Up);
-      SubscribeOn(_input.Down);
-      
-      foreach (DanceDirection direction in _directions) 
+      _input.On().Down().Subscribe(CheckDirection).AddTo(_subscribers);
+
+      foreach (DanceDirection direction in _directions)
         _directionsQueue.Enqueue(direction);
-      
+
       _directionsTypes = new Dictionary<InputAction, DanceDirectionType>()
       {
         { _input.Left, DanceDirectionType.Left },
@@ -53,21 +50,19 @@ namespace GameplayLogic.MiniGames.Dance
       };
     }
 
-    private void SubscribeOn(InputAction action) =>
-      _input.On(action).Down().Subscribe(CheckDirection).AddTo(_subscribers);
-
     private void OnDestroy() =>
       _subscribers.DisposeAll();
 
     private void CheckDirection(InputContext context)
     {
-      if (_directionsQueue.Peek().Direction == _directionsTypes[context.Action])
+      if (_directionsTypes.TryGetValue(context.Action, out DanceDirectionType directionType) &&
+          _directionsQueue.Peek().Direction == directionType)
       {
         DanceDirection direction = _directionsQueue.Dequeue();
         direction.gameObject.SetActive(false);
       }
 
-      if (_directionsQueue.Count == 0) 
+      if (_directionsQueue.Count == 0)
         EndMiniGame();
     }
 
