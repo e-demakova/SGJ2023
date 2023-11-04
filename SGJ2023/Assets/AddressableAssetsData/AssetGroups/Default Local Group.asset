@@ -117,6 +117,16 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a9545edd7004d8d449196e89560e25b2
+    m_Address: Assets/Scenes/07-Shop/Shop.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 170994467db27d44e82fa696166869f8
+    m_Address: Assets/Scenes/02-CopeSearch/Wanted.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 20e80ff5af28e34439b7c625987c3f42, type: 2}
   m_SchemaSet:
