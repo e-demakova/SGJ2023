@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace MiniGames.PaperWork
+namespace GameplayLogic.MiniGames.PaperWork
 {
   public enum BlankType
   {

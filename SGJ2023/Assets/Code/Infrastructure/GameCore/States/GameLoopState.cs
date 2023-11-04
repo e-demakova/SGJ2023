@@ -1,7 +1,5 @@
-using System.Collections.Generic;
 using Infrastructure.StateMachine.States;
 using Input;
-using Zenject;
 
 namespace Infrastructure.GameCore.States
 {

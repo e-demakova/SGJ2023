@@ -27,11 +27,6 @@ namespace Utils.Extensions
       container.BindInterfacesTo<T>().AsSingle().NonLazy();
     }
 
-    public static void BindService<T>(this DiContainer container, params object[] args)
-    {
-      container.BindInterfacesTo<T>().AsSingle().WithArguments(args).NonLazy();
-    }
-
     public static void FullBind<T>(this DiContainer container)
     {
       container.BindInterfacesAndSelfTo<T>().AsSingle().NonLazy();

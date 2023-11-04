@@ -2,18 +2,16 @@
 using Input;
 using SceneLoading;
 using UnityEngine.AddressableAssets;
-using Zenject;
 
 namespace Infrastructure.GameCore.States
 {
-  public class LoadSceneState :  IGameState, IEnterState, IPayloadState<AssetReference>
+  public class LoadSceneState : IGameState, IEnterState, IPayloadState<AssetReference>
   {
     private IGameStateMachine _stateMachine;
     private ISceneLoader _sceneLoader;
     private IInputService _inputService;
     
-    [Inject]
-    private void Inject(IGameStateMachine stateMachine, ISceneLoader sceneLoader, IInputService inputService)
+    public LoadSceneState(IGameStateMachine stateMachine, ISceneLoader sceneLoader, IInputService inputService)
     {
       _stateMachine = stateMachine;
       _sceneLoader = sceneLoader;

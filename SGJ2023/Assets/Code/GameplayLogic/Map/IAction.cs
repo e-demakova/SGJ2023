@@ -1,4 +1,4 @@
-﻿namespace Map
+﻿namespace GameplayLogic.Map
 {
   public interface IAction
   {

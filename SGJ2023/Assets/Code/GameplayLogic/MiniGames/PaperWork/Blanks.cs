@@ -10,7 +10,7 @@ using Utils.Extensions;
 using Zenject;
 using Random = UnityEngine.Random;
 
-namespace MiniGames.PaperWork
+namespace GameplayLogic.MiniGames.PaperWork
 {
   public class Blanks : MonoBehaviour
   {

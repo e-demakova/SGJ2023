@@ -9,7 +9,7 @@ using UnityEngine.InputSystem;
 using Utils.Extensions;
 using Zenject;
 
-namespace MiniGames.Dance
+namespace GameplayLogic.MiniGames.Dance
 {
   public class Dancer : MonoBehaviour
   {

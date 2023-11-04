@@ -1,9 +1,8 @@
-﻿using System;
-using Input;
+﻿using Input;
 using UnityEngine;
 using Zenject;
 
-namespace Map
+namespace GameplayLogic.Map
 {
   public class PlayerMove : MonoBehaviour
   {

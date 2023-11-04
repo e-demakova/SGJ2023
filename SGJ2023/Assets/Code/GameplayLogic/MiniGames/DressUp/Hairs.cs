@@ -8,7 +8,7 @@ using UnityEngine.AddressableAssets;
 using Utils.Extensions;
 using Zenject;
 
-namespace MiniGames.DressUp
+namespace GameplayLogic.MiniGames.DressUp
 {
   public class Hairs : MonoBehaviour
   {

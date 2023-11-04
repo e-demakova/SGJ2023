@@ -2,7 +2,7 @@
 using Input;
 using Observing.SubjectProperties;
 
-namespace Map
+namespace GameplayLogic.Map
 {
   public interface IMapInteractionService
   {

@@ -5,7 +5,7 @@ using UnityEngine;
 using Utils.Extensions;
 using Zenject;
 
-namespace Map
+namespace GameplayLogic.Map
 {
   public class InteractiveObject : MonoBehaviour
   {

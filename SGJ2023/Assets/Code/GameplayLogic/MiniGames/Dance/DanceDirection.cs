@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace MiniGames.Dance
+namespace GameplayLogic.MiniGames.Dance
 {
   public enum DanceDirectionType
   {

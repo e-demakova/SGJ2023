@@ -8,5 +8,6 @@ namespace SceneLoading
   public class ScenesConfig : ScriptableObject
   {
     public AssetReference InitialScene;
+    public AssetReference DayTimeInfoScene;
   }
 }

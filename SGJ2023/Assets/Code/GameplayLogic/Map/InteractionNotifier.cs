@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using Zenject;
 
-namespace Map
+namespace GameplayLogic.Map
 {
   public class InteractionNotifier : MonoBehaviour
   {

@@ -1,16 +1,15 @@
-using Infrastructure.GameCore;
+﻿using Infrastructure.GameCore;
 using Infrastructure.GameCore.States;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
 using Zenject;
 
-namespace Map
+namespace GameplayLogic.Map
 {
-  public class LoadSceneAction : MonoBehaviour, IAction
+  public class ChangeDayTimeAction : MonoBehaviour, IAction
   {
     [SerializeField]
-    private AssetReference _scene;
-
+    private DayTimeConfig _dayTime;
+    
     private IGameStateMachine _stateMachine;
 
     [Inject]
@@ -20,6 +19,6 @@ namespace Map
     }
     
     public void Act() =>
-      _stateMachine.Enter<LoadSceneState, AssetReference>(_scene);
+      _stateMachine.Enter<ChangeDayTimeState, DayTimeConfig>(_dayTime);
   }
 }
