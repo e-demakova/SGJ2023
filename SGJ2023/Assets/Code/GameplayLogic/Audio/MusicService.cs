@@ -18,6 +18,7 @@ namespace GameplayLogic.Audio
       _audio = new GameObject().AddComponent<AudioSource>();
       _audio.playOnAwake = false;
       _audio.loop = true;
+      _audio.volume = 0.5f;
       Object.DontDestroyOnLoad(_audio.gameObject);
     }
 
