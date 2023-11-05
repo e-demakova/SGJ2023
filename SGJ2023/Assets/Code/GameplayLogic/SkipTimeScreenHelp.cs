@@ -23,9 +23,7 @@ namespace GameplayLogic
       _sequence.Append(_image.DOFade(1, _fadeDuration));
     }
 
-    private void OnDestroy()
-    {
+    private void OnDestroy() =>
       _sequence?.Kill();
-    }
   }
 }

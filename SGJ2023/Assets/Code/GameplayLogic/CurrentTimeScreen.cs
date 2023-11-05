@@ -5,9 +5,7 @@ using Zenject;
 
 namespace GameplayLogic
 {
-  public interface ICurrentTimeScreen { }
-
-  public class CurrentTimeScreen : MonoBehaviour, ICurrentTimeScreen
+  public class CurrentTimeScreen : MonoBehaviour
   {
     [SerializeField]
     private TextMeshProUGUI _text;

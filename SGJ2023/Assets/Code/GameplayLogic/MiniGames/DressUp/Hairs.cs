@@ -22,6 +22,9 @@ namespace GameplayLogic.MiniGames.DressUp
     private GameObject _default;
 
     [SerializeField]
+    private GameObject _applyHelp;
+    
+    [SerializeField]
     private GameObject[] _hairs;
 
     private IInputService _input;
@@ -96,9 +99,14 @@ namespace GameplayLogic.MiniGames.DressUp
     private void DisablePrevious()
     {
       if (_hairIndex < 0)
+      {
         _default.SetActive(false);
+        _applyHelp.SetActive(true);
+      }
       else
+      {
         _hairs[_hairIndex].SetActive(false);
+      }
     }
 
     private void EnableCurrent() =>
