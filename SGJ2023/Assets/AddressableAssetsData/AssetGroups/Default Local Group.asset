@@ -157,6 +157,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c6e7dedec8f56ee4cb8eeead5ca7bc89
+    m_Address: Assets/Scenes/Quit.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 20e80ff5af28e34439b7c625987c3f42, type: 2}
   m_SchemaSet:
