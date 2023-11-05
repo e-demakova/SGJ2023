@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c933637bd84b452abc06495b08aeab8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dayTime: {fileID: 11400000, guid: 7ae1070ebb593b34083ab0a983d5890c, type: 2}
+  _dayTime: {fileID: 11400000, guid: 52020f1034cbca84baac701eb04e67c6, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

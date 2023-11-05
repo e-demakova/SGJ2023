@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using GameplayLogic.Map;
 using Infrastructure.GameCore;
 using Infrastructure.GameCore.States;
 using Input;
@@ -27,14 +28,20 @@ namespace GameplayLogic.MiniGames.DressUp
     private IGameStateMachine _gameStateMachine;
 
     [SerializeField]
+    private bool _isWantedSelection;
+    
     private int _hairIndex = -1;
     private bool _canApply;
+    
+    private IPoliceHairstyleClue _hairstyleClue;
 
     [Inject]
-    private void Construct(IInputService input, IGameStateMachine gameStateMachine)
+    private void Construct(IInputService input, IGameStateMachine gameStateMachine, IPoliceHairstyleClue hairstyleClue)
     {
       _input = input;
       _gameStateMachine = gameStateMachine;
+
+      _hairstyleClue = hairstyleClue;
     }
 
     private void Start()
@@ -53,6 +60,11 @@ namespace GameplayLogic.MiniGames.DressUp
 
     private void EndMiniGame()
     {
+      if (_isWantedSelection)
+        _hairstyleClue.DeclaredHairstyle = _hairIndex;
+      else
+        _hairstyleClue.ActualHairstyle = _hairIndex;
+      
       _subscribers.DisposeAll();
       _gameStateMachine.Enter<LoadSceneState, AssetReference>(_scene);
     }

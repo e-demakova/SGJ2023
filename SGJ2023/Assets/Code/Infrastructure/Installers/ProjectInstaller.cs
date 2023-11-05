@@ -33,6 +33,7 @@ namespace Infrastructure.Installers
       Container.BindService<MapInteractionService>();
       Container.BindService<DayTimeService>();
       Container.BindService<MusicService>();
+      Container.BindService<PoliceHairstyleClue>();
     }
 
     private void BindStateMachine()
