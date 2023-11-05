@@ -15,7 +15,7 @@ namespace GameplayLogic.Audio
 
     public void Initialize()
     {
-      _audio = new GameObject().AddComponent<AudioSource>();
+      _audio = new GameObject("Music").AddComponent<AudioSource>();
       _audio.playOnAwake = false;
       _audio.loop = true;
       _audio.volume = 0.5f;
@@ -28,7 +28,9 @@ namespace GameplayLogic.Audio
       _audio.Play();
     }
 
-    public void StopMusic() =>
+    public void StopMusic()
+    {
       _audio.Stop();
+    }
   }
 }
