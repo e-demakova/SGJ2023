@@ -621,6 +621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Direction>k__BackingField: 3
+  <Clip>k__BackingField: {fileID: 8300000, guid: 5a6077c07b83f2a469b23e18c5c9ccbc, type: 3}
 --- !u!1 &208018715
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,6 +931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Direction>k__BackingField: 2
+  <Clip>k__BackingField: {fileID: 8300000, guid: ed2e11f4a297789479e09b59dfeaf44a, type: 3}
 --- !u!1 &374514455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1329,6 +1331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Direction>k__BackingField: 1
+  <Clip>k__BackingField: {fileID: 8300000, guid: 5a6077c07b83f2a469b23e18c5c9ccbc, type: 3}
 --- !u!1 &1417929111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1848,6 +1851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Direction>k__BackingField: 0
+  <Clip>k__BackingField: {fileID: 8300000, guid: 0df63140d89073c41a6061b87a0911ac, type: 3}
 --- !u!212 &1678921776
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1946,6 +1950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Direction>k__BackingField: 3
+  <Clip>k__BackingField: {fileID: 8300000, guid: ed2e11f4a297789479e09b59dfeaf44a, type: 3}
 --- !u!212 &1691545456
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2008,6 +2013,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1803769678}
   - component: {fileID: 1803769679}
+  - component: {fileID: 1803769680}
   m_Layer: 0
   m_Name: Arrows
   m_TagString: Untagged
@@ -2048,6 +2054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2d38e304ce41d3895ca5cc9bc9a6e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audio: {fileID: 1803769680}
   _renderer: {fileID: 1499177733}
   _directions:
   - {fileID: 1678921775}
@@ -2061,6 +2068,103 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
+  _miniGameEndingDuration: 0.5
+--- !u!82 &1803769680
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803769677}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1832947365
 GameObject:
   m_ObjectHideFlags: 0
@@ -2411,6 +2515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Direction>k__BackingField: 0
+  <Clip>k__BackingField: {fileID: 8300000, guid: 0df63140d89073c41a6061b87a0911ac, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

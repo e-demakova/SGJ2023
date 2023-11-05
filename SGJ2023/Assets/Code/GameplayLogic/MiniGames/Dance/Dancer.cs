@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Infrastructure.GameCore;
 using Infrastructure.GameCore.States;
@@ -17,13 +18,19 @@ namespace GameplayLogic.MiniGames.Dance
     private readonly Queue<DanceDirection> _directionsQueue = new();
 
     [SerializeField]
+    private AudioSource _audio;
+
+    [SerializeField]
     private SpriteRenderer _renderer;
-    
+
     [SerializeField]
     private DanceDirection[] _directions;
 
     [SerializeField]
     private AssetReference _scene;
+
+    [SerializeField, Min(0)]
+    private float _miniGameEndingDuration = 0.2f;
 
     private IInputService _input;
     private IGameStateMachine _stateMachine;
@@ -58,21 +65,34 @@ namespace GameplayLogic.MiniGames.Dance
 
     private void CheckDirection(InputContext context)
     {
-      if (_directionsTypes.TryGetValue(context.Action, out DanceDirectionType directionType) &&
-          _directionsQueue.Peek().Direction == directionType)
-      {
-        DanceDirection direction = _directionsQueue.Dequeue();
-        direction.gameObject.SetActive(false);
-        _renderer.flipX = !_renderer.flipX;
-      }
+      bool directionCorrect = _directionsTypes.TryGetValue(context.Action, out DanceDirectionType directionType) &&
+                              _directionsQueue.Peek().Direction == directionType;
+
+      if (directionCorrect)
+        Dance();
 
       if (_directionsQueue.Count == 0)
         EndMiniGame();
     }
 
+    private void Dance()
+    {
+      DanceDirection direction = _directionsQueue.Dequeue();
+      direction.gameObject.SetActive(false);
+      _renderer.flipX = !_renderer.flipX;
+      _audio.clip = direction.Clip;
+      _audio.Play();
+    }
+
     private void EndMiniGame()
     {
       _subscribers.DisposeAll();
+      StartCoroutine(Ending());
+    }
+    
+    private IEnumerator Ending()
+    {
+      yield return new WaitForSeconds(_miniGameEndingDuration);
       _stateMachine.Enter<LoadSceneState, AssetReference>(_scene);
     }
   }

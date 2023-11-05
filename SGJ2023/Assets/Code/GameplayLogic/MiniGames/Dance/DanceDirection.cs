@@ -14,5 +14,8 @@ namespace GameplayLogic.MiniGames.Dance
   {
     [field: SerializeField]
     public DanceDirectionType Direction { get; private set; }
+
+    [field: SerializeField]
+    public AudioClip Clip { get; private set; }
   }
 }
