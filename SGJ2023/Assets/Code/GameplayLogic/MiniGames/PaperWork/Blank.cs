@@ -1,5 +1,7 @@
 ﻿using System;
 using DG.Tweening;
+using DG.Tweening.Core;
+using DG.Tweening.Plugins.Options;
 using UnityEngine;
 
 namespace GameplayLogic.MiniGames.PaperWork
@@ -26,6 +28,11 @@ namespace GameplayLogic.MiniGames.PaperWork
     [SerializeField]
     private float _moveDuration = 0.1f;
 
+    private Tween _tween;
+
+    private void OnDisable() =>
+      _tween?.Kill();
+
     public Blank Init(BlankType type, int sortingOrder)
     {
       Type = type;
@@ -43,7 +50,7 @@ namespace GameplayLogic.MiniGames.PaperWork
 
     public void MoveTo(Vector3 position)
     {
-      transform.DOMove(position, _moveDuration);
+      _tween = transform.DOMove(position, _moveDuration);
       _renderer.sortingOrder *= -1;
     }
   }

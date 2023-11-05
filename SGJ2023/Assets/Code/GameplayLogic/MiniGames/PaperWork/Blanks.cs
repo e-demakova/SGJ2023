@@ -33,6 +33,12 @@ namespace GameplayLogic.MiniGames.PaperWork
     private GameObject _blankPrefab;
 
     [SerializeField]
+    private GameObject _addMoneyPrefab;
+    
+    [SerializeField]
+    private GameObject _removeMoneyPrefab;
+    
+    [SerializeField]
     private AssetReference _scene;
 
     [SerializeField, Min(0)]
@@ -41,6 +47,9 @@ namespace GameplayLogic.MiniGames.PaperWork
     private IGameObjectBuilderFactory _factory;
     private IInputService _input;
     private IGameStateMachine _gameStateMachine;
+
+    private IPool<MoneyAdder> _addMoneyPool;
+    private IPool<MoneyAdder> _removeMoneyPool;
 
     [Inject]
     private void Construct(IGameObjectBuilderFactory factory, IInputService input, IGameStateMachine gameStateMachine)
@@ -52,6 +61,9 @@ namespace GameplayLogic.MiniGames.PaperWork
 
     private void Start()
     {
+      _addMoneyPool = new Pool<MoneyAdder>(_factory.Create(_addMoneyPrefab));
+      _removeMoneyPool = new Pool<MoneyAdder>(_factory.Create(_removeMoneyPrefab));
+      
       SubscribeOnInput();
 
       CreateBlanks();
@@ -88,7 +100,7 @@ namespace GameplayLogic.MiniGames.PaperWork
     private void MoveBlank(BlankType type, Vector3 position)
     {
       Blank blank = _blanks.Dequeue();
-      AddMoney(blank.Type == type ? 1 : -1);
+      AddMoney(blank.Type == type ? _addMoneyPool : _removeMoneyPool);
       blank.MoveTo(GetShuffledPosition(position));
 
       if (_blanks.Count == 0)
@@ -107,7 +119,8 @@ namespace GameplayLogic.MiniGames.PaperWork
       _gameStateMachine.Enter<LoadSceneState, AssetReference>(_scene);
     }
 
-    private void AddMoney(int amount) { }
+    private void AddMoney(IPool<MoneyAdder> pool) =>
+      pool.Get();
 
     private static BlankType GetBlankType() =>
       Random.Range(0f, 1f) switch

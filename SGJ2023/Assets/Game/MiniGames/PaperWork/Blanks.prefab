@@ -46,12 +46,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 064d807e1096400fb69bff27f55295f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _blanksCount: 15
+  _blanksCount: 5
   _right: {fileID: 7878918130778026468}
   _left: {fileID: 2280883216768972466}
   _blankPrefab: {fileID: 6986758566438673303, guid: 55f1ca4eaf975b5409ddd7ef8be3b01f, type: 3}
+  _addMoneyPrefab: {fileID: 3810837580335093242, guid: 7aadc1bdc9709ab4f988c63aa321c7d0, type: 3}
+  _removeMoneyPrefab: {fileID: 6712698359404124345, guid: 12da734dae6eb3f439a0e8ebadd59174, type: 3}
   _scene:
-    m_AssetGUID: c197b06ea90e6e848ad0a60b10c42d30
+    m_AssetGUID: d4034c0d59ace574a9281c92c17e3a6a
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
@@ -81,7 +83,7 @@ Transform:
   m_GameObject: {fileID: 4104219350702875012}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.95, y: -0.27, z: 0}
+  m_LocalPosition: {x: 2.95, y: -0.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -112,7 +114,7 @@ Transform:
   m_GameObject: {fileID: 4567682316720381300}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.95, y: -0.27, z: 0}
+  m_LocalPosition: {x: -2.95, y: -0.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
