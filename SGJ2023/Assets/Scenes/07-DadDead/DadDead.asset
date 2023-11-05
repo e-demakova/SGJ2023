@@ -17,6 +17,6 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  TimeText: 14:00
+  TimeText: 16:00
   BottleStatus: {fileID: 21300000, guid: c14ebebdb6e70b545af7fd2b5d9575e3, type: 3}
   Music: {fileID: 8300000, guid: f5f83a60f54e62040935468ba31d9a58, type: 3}

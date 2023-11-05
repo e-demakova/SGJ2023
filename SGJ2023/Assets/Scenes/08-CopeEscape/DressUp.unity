@@ -235,6 +235,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2506004736472676978, guid: d22e356e6a6c0724481c20d12ec0d473, type: 3}
+      propertyPath: _isWantedSelection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506004736472676978, guid: d22e356e6a6c0724481c20d12ec0d473, type: 3}
       propertyPath: _scene.m_AssetGUID
       value: b181076984aed0946a9d13ae6158a1ee
       objectReference: {fileID: 0}
