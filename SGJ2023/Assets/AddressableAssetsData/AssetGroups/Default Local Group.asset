@@ -147,6 +147,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 53227e9c6084f7946a2de3083a1a5f77
+    m_Address: Assets/Scenes/Mom/Mom.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 20e80ff5af28e34439b7c625987c3f42, type: 2}
   m_SchemaSet:
