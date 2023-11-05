@@ -17,6 +17,9 @@ namespace GameplayLogic.MiniGames.Dance
     private readonly Queue<DanceDirection> _directionsQueue = new();
 
     [SerializeField]
+    private SpriteRenderer _renderer;
+    
+    [SerializeField]
     private DanceDirection[] _directions;
 
     [SerializeField]
@@ -60,6 +63,7 @@ namespace GameplayLogic.MiniGames.Dance
       {
         DanceDirection direction = _directionsQueue.Dequeue();
         direction.gameObject.SetActive(false);
+        _renderer.flipX = !_renderer.flipX;
       }
 
       if (_directionsQueue.Count == 0)
