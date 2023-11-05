@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _image: {fileID: 1666540959}
-  _fadeDuration: 0
+  _fadeDuration: 1
 --- !u!1 &1882619873
 GameObject:
   m_ObjectHideFlags: 0
