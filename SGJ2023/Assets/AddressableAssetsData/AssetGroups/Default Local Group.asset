@@ -152,6 +152,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86efecc88efe4854ead43475b412611e
+    m_Address: Assets/Scenes/09-Mom/Kill.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 20e80ff5af28e34439b7c625987c3f42, type: 2}
   m_SchemaSet:
