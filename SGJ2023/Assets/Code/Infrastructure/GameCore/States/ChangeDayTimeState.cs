@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using GameplayLogic.Audio;
 using GameplayLogic.Map;
 using Infrastructure.StateMachine.States;
@@ -11,21 +12,24 @@ namespace Infrastructure.GameCore.States
 {
   public class ChangeDayTimeState : IGameState, IPayloadState<DayTimeConfig>
   {
+    public const float WaitDuration = 1f;
+    
     private readonly IGameStateMachine _stateMachine;
     private readonly ISceneLoader _sceneLoader;
-    private readonly IInputService _inputService;
+    private readonly IInputService _input;
     private readonly ICoroutineRunner _coroutineRunner;
     private readonly IDayTimeService _dayTimeService;
     private readonly IMusicService _musicService;
     
     private DayTimeConfig _dayTimeConfig;
+    private IDisposable _subscriber;
 
-    public ChangeDayTimeState(IGameStateMachine stateMachine, ISceneLoader sceneLoader, IInputService inputService,
+    public ChangeDayTimeState(IGameStateMachine stateMachine, ISceneLoader sceneLoader, IInputService input,
       ICoroutineRunner coroutineRunner, IDayTimeService dayTimeService, IMusicService musicService)
     {
       _stateMachine = stateMachine;
       _sceneLoader = sceneLoader;
-      _inputService = inputService;
+      _input = input;
       _coroutineRunner = coroutineRunner;
       _dayTimeService = dayTimeService;
       _musicService = musicService;
@@ -37,7 +41,7 @@ namespace Infrastructure.GameCore.States
       _dayTimeConfig = payload;
       _dayTimeService.Config = _dayTimeConfig;
       
-      _inputService.Enabled = false;
+      _input.Enabled = false;
       _sceneLoader.Load(_sceneLoader.Scenes.DayTimeInfoScene, ShowDayTimeInfo);
     }
 
@@ -46,14 +50,22 @@ namespace Infrastructure.GameCore.States
 
     private IEnumerator Showing()
     {
-      yield return new WaitForSeconds(1f);
-      _musicService.StartMusic(_dayTimeConfig.Music);
-      _sceneLoader.Load(_dayTimeConfig.Scene, EnterNextState);
+      _input.Enabled = true;
+      yield return new WaitForSeconds(WaitDuration);
+      _subscriber = _input.On(_input.Act).Down().Subscribe(LoadNextDayTimeScene);
     }
-    
-    private void EnterNextState()
+
+    private void LoadNextDayTimeScene()
     {
-      _stateMachine.Enter<GameLoopState>();
+      _subscriber.Dispose();
+      
+      _input.Enabled = false;
+      _sceneLoader.Load(_dayTimeConfig.Scene, EnterNextState);
+      
+      _musicService.StartMusic(_dayTimeConfig.Music);
     }
+
+    private void EnterNextState() =>
+      _stateMachine.Enter<GameLoopState>();
   }
 }
