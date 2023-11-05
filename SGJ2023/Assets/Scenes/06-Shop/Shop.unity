@@ -849,54 +849,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8136264579690725981, guid: b07912a57b3d2b74b980b9698e2e9787, type: 3}
-      propertyPath: lengthInSec
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8136264579690725981, guid: b07912a57b3d2b74b980b9698e2e9787, type: 3}
-      propertyPath: ColorModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8136264579690725981, guid: b07912a57b3d2b74b980b9698e2e9787, type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8136264579690725981, guid: b07912a57b3d2b74b980b9698e2e9787, type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 8136264579690725981, guid: b07912a57b3d2b74b980b9698e2e9787, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8136264579690725981, guid: b07912a57b3d2b74b980b9698e2e9787, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.a
-      value: 0.5764706
-      objectReference: {fileID: 0}
-    - target: {fileID: 8136264579690725981, guid: b07912a57b3d2b74b980b9698e2e9787, type: 3}
-      propertyPath: InitialModule.startSpeed.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8136264579690725981, guid: b07912a57b3d2b74b980b9698e2e9787, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.atime1
-      value: 55766
-      objectReference: {fileID: 0}
-    - target: {fileID: 8136264579690725981, guid: b07912a57b3d2b74b980b9698e2e9787, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.atime2
-      value: 65189
-      objectReference: {fileID: 0}
-    - target: {fileID: 8136264579690725981, guid: b07912a57b3d2b74b980b9698e2e9787, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key1.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8136264579690725981, guid: b07912a57b3d2b74b980b9698e2e9787, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.m_ColorSpace
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8136264579690725981, guid: b07912a57b3d2b74b980b9698e2e9787, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.m_NumAlphaKeys
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

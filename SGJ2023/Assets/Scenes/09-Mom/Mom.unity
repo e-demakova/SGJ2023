@@ -133,11 +133,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 235719532565347136, guid: a34270a34077bc24a9feea1395c20f22, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.81
+      value: 12.18
       objectReference: {fileID: 0}
     - target: {fileID: 235719532565347136, guid: a34270a34077bc24a9feea1395c20f22, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.6
+      value: 5.97
       objectReference: {fileID: 0}
     - target: {fileID: 235719532565347136, guid: a34270a34077bc24a9feea1395c20f22, type: 3}
       propertyPath: m_LocalPosition.z
@@ -582,6 +582,18 @@ PrefabInstance:
       propertyPath: sharedProfile
       value: 
       objectReference: {fileID: 11400000, guid: fe89a5d8972b766449459aa0b057424d, type: 2}
+    - target: {fileID: 5030608846803050007, guid: 05e49814239dcd74bbb28b6a3028ee92, type: 3}
+      propertyPath: m_Color.b
+      value: 0.15294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030608846803050007, guid: 05e49814239dcd74bbb28b6a3028ee92, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030608846803050007, guid: 05e49814239dcd74bbb28b6a3028ee92, type: 3}
+      propertyPath: m_Color.r
+      value: 0.35686275
+      objectReference: {fileID: 0}
     - target: {fileID: 5403620163606866864, guid: 05e49814239dcd74bbb28b6a3028ee92, type: 3}
       propertyPath: m_Name
       value: ClockPlace

@@ -223,7 +223,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f8cf41056a96e62499302fdb20fba6d8, type: 2}
+  - {fileID: 2100000, guid: 8dfdae92811a435469d2eaefa0d57460, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -245,7 +245,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1e2046a61fef165489652cb8e0c337a4, type: 3}
-  m_Color: {r: 0.21922469, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.40943396, b: 0.79598564, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -2349,7 +2349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1848848239
 Transform:
   m_ObjectHideFlags: 0
