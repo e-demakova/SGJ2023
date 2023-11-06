@@ -462,6 +462,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5635872795965444127, guid: d36ee2163d7884748aab02e9730da963, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8037200170488977641, guid: d36ee2163d7884748aab02e9730da963, type: 3}
       propertyPath: m_Name
       value: Toilet
