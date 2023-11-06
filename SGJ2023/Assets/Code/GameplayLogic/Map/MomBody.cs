@@ -5,8 +5,11 @@ using UnityEngine.Rendering;
 
 namespace GameplayLogic.Map
 {
-  public class TriggerVolumeChange : MonoBehaviour
+  public class MomBody : MonoBehaviour
   {
+    [SerializeField]
+    private AudioSource _audio;
+    
     [SerializeField]
     private Collider2D _collider;
     
@@ -28,6 +31,7 @@ namespace GameplayLogic.Map
     {
       _subscriber.Dispose();
       _volume.profile = _profile;
+      _audio.Play();
     }
   }
 }

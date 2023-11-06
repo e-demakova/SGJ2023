@@ -369,7 +369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 1340067685}
   _appearDuration: 1
-  _quitDuration: 2.5
+  _quitDuration: 5
 --- !u!1 &982307002
 GameObject:
   m_ObjectHideFlags: 0
