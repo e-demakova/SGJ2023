@@ -22,3 +22,8 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
+  QuitScene:
+    m_AssetGUID: c6e7dedec8f56ee4cb8eeead5ca7bc89
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0

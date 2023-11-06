@@ -9,5 +9,6 @@ namespace SceneLoading
   {
     public AssetReference InitialScene;
     public AssetReference DayTimeInfoScene;
+    public AssetReference QuitScene;
   }
 }
