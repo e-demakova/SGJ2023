@@ -162,6 +162,16 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 32b5d60c3860cb343b803ec55a964b9d
+    m_Address: Assets/Scenes/07-DadDead/Window.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2812a9914b9dc164d93361e1317236de
+    m_Address: Assets/Scenes/07-DadDead/DadDead-passed.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 20e80ff5af28e34439b7c625987c3f42, type: 2}
   m_SchemaSet:
